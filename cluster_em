@@ -1,0 +1,151 @@
+#clustering(EM)
+
+=== Run information ===
+
+Scheme:       weka.clusterers.EM -I 100 -N -1 -X 10 -max -1 -ll-cv 1.0E-6 -ll-iter 1.0E-6 -M 1.0E-6 -K 10 -num-slots 1 -S 100
+Relation:     clean_bank-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    45211
+Attributes:   17
+              age
+              job
+              marital
+              education
+              default
+              balance
+              housing
+              loan
+              contact
+              day
+              month
+              duration
+              campaign
+              pdays
+              previous
+              poutcome
+              y
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+EM
+==
+
+Number of clusters selected by cross validation: 3
+Number of iterations performed: 2
+
+
+                     Cluster
+Attribute                  0          1          2
+                      (0.42)      (0.4)     (0.18)
+===================================================
+age
+  mean                 0.3224     0.2662     0.3104
+  std. dev.            0.1462     0.1133     0.1526
+
+job
+  management        1765.6234  2521.5206   5173.856
+  technician        4248.8517  2661.5226   689.6257
+  entrepreneur        694.602   575.2193   220.1787
+  blue-collar       3426.0272  5986.1388    322.834
+  unknown             221.494    20.4511    49.0549
+  retired           1527.3107   258.2577   481.4316
+  admin.            2323.7593  2499.5501   350.6906
+  services          1852.0437  2170.6874   134.2689
+  self-employed      735.1143   475.4991   371.3866
+  unemployed         775.9793   360.3068   169.7139
+  housemaid          928.4761   171.7003   142.8235
+  student             458.258   268.1883   214.5538
+  [total]          18957.5396 17969.0422  8320.4182
+marital
+  married          11851.3065  10607.819  4757.8745
+  single            4781.5788  5326.1374  2685.2838
+  divorced          2315.6543  2026.0858   868.2599
+  [total]          18948.5396 17960.0422  8311.4182
+education
+  tertiary          3576.9472   3494.722  6232.3307
+  secondary        11113.3936 10771.7234   1319.883
+  unknown            959.3717    640.601   260.0273
+  primary           3299.8271  3053.9958   500.1771
+  [total]          18949.5396 17961.0422  8312.4182
+default
+  no               18494.9479 17664.1665  8239.8856
+  yes                452.5917   294.8757    70.5326
+  [total]          18947.5396 17959.0422  8310.4182
+balance
+  mean                 0.0819     0.0795      0.105
+  std. dev.            0.0139     0.0102     0.0548
+
+housing
+  yes               6117.4461 16081.5692  2933.9846
+  no               12830.0935   1877.473  5376.4335
+  [total]          18947.5396 17959.0422  8310.4182
+loan
+  no               15387.9433 15020.1732  7561.8835
+  yes               3559.5963   2938.869   748.5347
+  [total]          18947.5396 17959.0422  8310.4182
+contact
+  unknown           3798.9739  8358.2687   865.7574
+  cellular         13367.1062  9033.8895  6887.0043
+  telephone         1782.4596    567.884   558.6565
+  [total]          18948.5396 17960.0422  8311.4182
+day
+  mean                 0.5342     0.4537     0.4868
+  std. dev.            0.2865     0.2623     0.2751
+
+month
+  may               1367.5166 11387.8212  1013.6622
+  jun               2972.2148  1619.0308   752.7544
+  jul                5488.568   572.3267   837.1053
+  aug                4128.022   179.8219  1942.1561
+  oct                288.4771   115.8715   336.6513
+  nov               1574.2053  1062.5729  1336.2218
+  dec                 74.8594      38.35   103.7907
+  jan                769.8553   329.4535   306.6913
+  feb               1081.2816    904.699   666.0194
+  mar                200.3145    53.6387   226.0468
+  apr                820.6347  1586.2057   528.1596
+  sep                191.5902   119.2504   271.1594
+  [total]          18957.5396 17969.0422  8320.4182
+duration
+  mean                 0.0539     0.0507     0.0531
+  std. dev.            0.0604     0.0443     0.0483
+
+campaign
+  mean                 0.0419     0.0171     0.0224
+  std. dev.            0.0692     0.0222     0.0296
+
+pdays
+  mean                 0.0007     0.0892     0.0627
+  std. dev.            0.0084     0.1553     0.1021
+
+previous
+  mean                      0     0.0024     0.0062
+  std. dev.            0.0004     0.0048     0.0175
+
+poutcome
+  unknown          18805.5756 12742.9077  5413.5167
+  failure             37.7553  3586.4555  1279.7892
+  other               38.5115  1168.5378   635.9507
+  success             67.6973   463.1413   983.1615
+  [total]          18949.5396 17961.0422  8312.4182
+y
+  no               16785.4556 16724.5229  6415.0215
+  yes                2162.084  1234.5193  1895.3967
+  [total]          18947.5396 17959.0422  8310.4182
+
+
+Time taken to build model (full training data) : 197.25 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      33877 ( 75%)
+1       6761 ( 15%)
+2       4573 ( 10%)
+
+
+Log likelihood: 5.36244
+
